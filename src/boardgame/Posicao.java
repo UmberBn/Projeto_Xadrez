@@ -11,11 +11,11 @@ package boardgame;
  */
 public class Posicao {
     private int row;
-    private int collum;
+    private int collumns;
 
-    public Posicao(int row, int collum) {
+    public Posicao(int row, int collumns) {
         this.row = row;
-        this.collum = collum;
+        this.collumns = collumns;
     }
 
     public int getRow() {
@@ -26,17 +26,17 @@ public class Posicao {
         this.row = row;
     }
 
-    public int getCollum() {
-        return collum;
+    public int getCollumns() {
+        return collumns;
     }
 
-    public void setCollum(int collum) {
-        this.collum = collum;
+    public void setCollumns(int collumns) {
+        this.collumns = collumns;
     }
 
     @Override
     public String toString() {
-        return "Posi\u00e7\u00e3o{" + "row=" + row + ", collum=" + collum + '}';
+        return  "Linha" + row + ", Coluna" + collumns ;
     }
     
     
