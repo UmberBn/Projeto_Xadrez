@@ -6,6 +6,7 @@
 package aplication;
 
 import boardgame.Tabuleiro;
+import chess.PartidaDeXadrez;
 
 /**
  *
@@ -19,6 +20,8 @@ public class Program {
     public static void main(String[] args) {
         // TODO code application logic here
         Tabuleiro[][] tab=new Tabuleiro[8][8];
+        PartidaDeXadrez partida=new PartidaDeXadrez();
+        UI.printBoard(partida.getPecas());
     }
     
 }
