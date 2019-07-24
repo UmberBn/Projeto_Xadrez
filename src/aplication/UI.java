@@ -15,7 +15,7 @@ public class UI {
     
     public static void printBoard(PecaDeXadrez[][] pecas) {
         for (int i = 0; i < pecas.length; i++) {
-            System.out.println((8 - i) + " ");
+            System.out.print((8 - i) + " ");
             for (int p = 0; p < pecas.length; p++) {
                 printPeca(pecas[i][p]);
             }
@@ -30,6 +30,6 @@ public class UI {
         } else {
             System.out.print(peca);
         }
-        System.out.println(" ");
+        System.out.print(" ");
     }
 }
