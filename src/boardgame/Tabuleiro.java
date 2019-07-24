@@ -49,7 +49,7 @@ public class Tabuleiro {
 
     public void placePiece(Peca peca, Posicao posicao) {
         if (posicaoOcupada(posicao)) {
-            throw new BoardException("A peça ja ocupada a " + posicao);
+            throw new BoardException("Ja existe uma peça na " + posicao);
         }
         peças[posicao.getRow()][posicao.getCollumns()] = peca;
         peca.posicao = posicao;

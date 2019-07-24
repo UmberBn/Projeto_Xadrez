@@ -7,8 +7,7 @@ package chess;
 
 import boardgame.Tabuleiro;
 import boardgame.Posicao;
-import chess.Pieces.Rei;
-import chess.Pieces.Torre;
+import chess.Pieces.*;
 
 /**
  *
@@ -35,15 +34,20 @@ public class PartidaDeXadrez {
         return mat;
     }
 
-    private void posicaoInicial() {
-        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(9,9));
-        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(9,9));
-        tabuleiro.placePiece(new Rei(Cor.Brancas,tabuleiro),new Posicao(0,4));
-        tabuleiro.placePiece(new Rei(Cor.Pretas,tabuleiro),new Posicao(7,4));
-        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(7,0));
-        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(7,7));
-        
+    private void novasPecas(char collumn, int row, PecaDeXadrez pecas) {
+        tabuleiro.placePiece(pecas, new ChessPosicao(collumn, row).toPosition());
     }
-    
-    
+
+    private void posicaoInicial() {
+        //Reis
+        novasPecas('e', 8, new Rei(Cor.Brancas, tabuleiro));
+        novasPecas('e', 1, new Rei(Cor.Brancas, tabuleiro));
+        //Torres
+        novasPecas('a', 1, new Torre(Cor.Brancas, tabuleiro));
+        novasPecas('h', 1, new Torre(Cor.Brancas, tabuleiro));
+        novasPecas('a', 8, new Torre(Cor.Pretas, tabuleiro));
+        novasPecas('h', 8, new Torre(Cor.Pretas, tabuleiro));
+
+    }
+
 }
