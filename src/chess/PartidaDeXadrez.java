@@ -36,12 +36,13 @@ public class PartidaDeXadrez {
     }
 
     private void posicaoInicial() {
-        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(0,0));
-        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(0,7));
+        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(9,9));
+        tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(9,9));
         tabuleiro.placePiece(new Rei(Cor.Brancas,tabuleiro),new Posicao(0,4));
         tabuleiro.placePiece(new Rei(Cor.Pretas,tabuleiro),new Posicao(7,4));
         tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(7,0));
         tabuleiro.placePiece(new Torre(Cor.Brancas,tabuleiro), new Posicao(7,7));
+        
     }
     
     
